@@ -1,0 +1,748 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.matchscore-secation {
+    background-image: linear-gradient(146.92deg, #EA14EC -2.59%, #1246CE 100.83%);
+    position: relative;
+    padding: 80px 0;
+}
+
+.matchscore-secation:before {
+    content: '';
+    height: 100%;
+    width: 30%;
+    display: inline-block;
+    background: url(img/leftpointing.png);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.matchscore-secation:after {
+    content: '';
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    background: url(img/rightpointing.png);
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.flcenter {
+    position: relative;
+    z-index: 2;
+}
+
+.teamsname {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.datetime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.livestatus {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.line {
+    position: absolute;
+    left: 34%;
+    right: 34%;
+    top: 41%;
+    bottom: 59%;
+    opacity: 0.2;
+    border: 1px solid rgba(247, 247, 250, 0.75);
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 63px;
+    height: 24px;
+    top: 0px;
+    color: #FFFFFF;
+    background: #008632;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.statusdot {
+    width: 6px;
+    height: 6px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 2px solid #0086328f;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teamlogo {
+    display: flex;
+    width: 131px;
+    height: 130px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.teamlogo.active {
+    border: 3px solid #E50695;
+    box-shadow: 0px 0px 2px rgba(17, 23, 32, 0.75);
+}
+
+.teamlogoimg {
+    width: 55%;
+}
+
+.vs {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.teamone,
+.teamtwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 23%;
+}
+
+.score {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.overfinish {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.75);
+    border-top: 1px solid #f7f7fa33;
+    border-bottom: 1px solid #f7f7fa33;
+    padding: 7px 0;
+    margin: 5px 0;
+}
+
+.totalover {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffffbf;
+}
+
+.teamonescore.active .totalover {
+    color: #FFFFFF;
+}
+
+.runneeded {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #F7F7FA;
+    border-top: 1px solid rgba(247, 247, 250, 0.2);
+    border-bottom: 1px solid rgba(247, 247, 250, 0.2);
+    width: 42%;
+    margin: 1rem auto 0;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #F7F7FA;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.scorecard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selectto {
+    width: 46px;
+    height: 16px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.card {
+    width: 48%;
+}
+
+.playerscore {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFFFF;
+    border: 0.5px solid #1F1F1F;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+}
+
+.playerscore:before {
+    content: '';
+    width: 1px;
+    height: 80%;
+    background: rgb(31 31 31 / 20%);
+    position: absolute;
+    left: 50%;
+}
+
+.batsman {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #1C1C28;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.batsman .batman-score {
+    font-weight: 700;
+    font-size: 20px;
+    color: #E50695;
+}
+
+.update-secation {
+    position: relative;
+    padding: 80px 0;
+}
+
+.update {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+.updates {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #1C1C28;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.button {
+    width: 69px;
+    height: 11px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #E50695;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.image {
+    display: block;
+    width: 100%;
+
+}
+
+.overlay {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.overlay:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: -webkit-linear-gradient(90deg, #0F1C70 -4%, rgba(45, 65, 207, 0) 58.15%);
+}
+
+.match-highlight-title {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    z-index: 3;
+}
+
+.match-highlight-title h2 {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+
+.match-highlight-title .update.share {
+    padding: 10px 0 0;
+}
+
+.match-highlight-title .news {
+    color: #fff;
+}
+
+
+.livestatus:before {
+    content: '';
+    width: 42%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    display: block;
+    background: rgb(247 247 250 / 20%);
+    z-index: 1;
+}
+
+.teamsname img {
+    margin-right: 5px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.col6 {
+    flex: 0 0 auto;
+    width: 49.5%;
+    padding-right: 15px;
+    position: relative;
+}
+
+.col6:after {
+    content: "";
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, #EA14EC -2.04%, #1246CE 102.14%);
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    border-radius: 0px 0px 5px 5px;
+    margin: 0 auto;
+    left: 10%
+}
+
+.col12 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cricket-news {
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 280px;
+    background-color: #F5F5F5;
+    position: relative;
+    margin: 5px;
+}
+
+.cricket-news:after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #EA14EC -2.04%, #1246CE 102.14%);
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    border-radius: 0px 0px 5px 5px;
+    margin: 0 auto;
+    left: 10%
+}
+
+.cricket-img {
+    position: relative;
+}
+
+.cricket-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cricket-content {
+    padding: 0px 20px;
+}
+
+.cricket-content p {
+    font-weight: 500;
+    font-size: 13px;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 24px;
+}
+
+.share {
+    padding: 10px 15px 0px;
+}
+
+.sharebtn img {
+    width: 14px;
+}
+
+.news {
+    font-weight: 400;
+    font-size: 12px;
+    color: #1F1F1F;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .update-secation,
+    .matchscore-secation {
+        padding: 50px 10px;
+    }
+
+    .matchscore-secation:before {
+        height: 60%
+    }
+
+    .matchscore-secation:after {
+        height: 60%;
+        width: 56%;
+    }
+
+    .update {
+        padding: 0 15px;
+    }
+
+    .livestatus:before {
+        width: 67%;
+    }
+
+    .scoreboard {
+        justify-content: space-around;
+    }
+
+    .runneeded {
+        width: 67%;
+    }
+
+    .location {
+        color: #f7f7fab8;
+    }
+
+    .col6 {
+        flex: unset;
+        padding-left: 15px;
+    }
+
+    .cricket-content p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .teamone,
+    .teamtwo {
+        width: 33%;
+    }
+
+    .playerscore {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .batsman {
+        font-size: 14px;
+    }
+
+    .batsman .batman-score {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .scorecard {
+        display: block;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .update-secation,
+    .matchscore-secation {
+        padding: 20px 10px;
+    }
+
+    .score,
+    .overfinish,
+    .totalover {
+        font-size: 16px;
+    }
+
+    .teamone,
+    .teamtwo {
+        width: 40%;
+    }
+
+    .teamlogo {
+        height: 60px;
+        width: 60px;
+    }
+
+    .vs {
+        font-size: 12px;
+    }
+
+    .scoreboard {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .livestatus:before {
+        width: 100%;
+    }
+
+    .runneeded {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .location {
+        font-size: 12px;
+    }
+
+    .matchscore-secation:before {
+        height: 45%;
+    }
+
+    .matchscore-secation:after {
+        height: 40%;
+        width: 90%;
+    }
+
+    .col6 {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .col12 {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cricket-news {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        margin: 15px 0px;
+        height: 96px;
+    }
+
+    .cricket-img img {
+        height: 96px;
+        width: 127px
+    }
+
+    .mobile.view {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+        justify-content: space-around;
+    }
+
+    .cricket-img:after {
+        content: "";
+        width: 80%;
+        height: 2px;
+        background: linear-gradient(90deg, #EA14EC -2.04%, #1246CE 102.14%);
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        border-radius: 0px 0px 5px 5px;
+        margin: 0 auto;
+        left: 10%;
+    }
+
+    .cricket-news:after {
+        background: unset;
+    }
+
+    .update {
+        margin-bottom: 15px;
+        align-items: unset;
+    }
+
+    .updates {
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .cricket-content {
+        padding: 0px 15px;
+    }
+
+    .cricket-content p {
+        line-height: 2;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .overlay:after {
+        background: unset;
+    }
+
+    .cricket-card {
+        margin: 0 auto;
+        border-radius: 5px;
+        width: 100%;
+        background-color: #F5F5F5;
+        position: relative;
+    }
+
+    .col6:after {
+        width: 96%;
+        left: 0;
+    }
+
+    .col6.hide {
+        display: none;
+    }
+
+    .cricketimage {
+        position: relative;
+    }
+
+    .cricketimage img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .cricketcontent {
+        padding: 10px 0px;
+        line-height: 2;
+    }
+
+    .cricketcontent p {
+        font-weight: 500;
+        font-size: 13px;
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        line-height: 24px;
+    }
+
+    .match-highlight-title {
+        position: static;
+        padding: initial;
+        margin: auto 15px 25px;
+    }
+
+    .match-highlight-title h2 {
+        color: #1F1F1F;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .match-highlight-title .news {
+        color: #1F1F1F;
+    }
+}
